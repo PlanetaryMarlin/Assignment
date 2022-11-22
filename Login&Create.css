@@ -1,0 +1,126 @@
+body {
+    --Main-Colour: #ffcc00;
+    --Secondary-Colour: rgba(220, 99, 0, 0.601);
+    --border-radius: 4px;
+
+    /* Make everything on this page center*/
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px ;
+
+    /* Control Background Image */
+    background: url(./book-library-with-open-textbook_1150-5924.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.error {
+    color: red;
+}
+
+.container {
+    width: 300px;
+    max-width: 300px;
+    margin: 1rem; /* 1 Rem = 1 Font Size (18 px) */
+    padding: 2rem; /* 2 Rem = 2 Font Size (36 px) */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    background: white;
+} 
+
+/* Change font for everything*/
+
+.container, .form--button, .form--input {
+    font: 500 1rem 'Times New Roman';
+}
+
+
+/* Depending on what the user have selected (login or sign up) one page would be hidden*/
+.form--hidden {
+    display: none;
+}
+
+
+/* Get rid of the extra space on top and bottom */
+
+.form >*:first-child {  /* The H1 tag is the first child*/
+    margin-top: 0;
+    text-align: center;
+}
+
+.form >*:last-child {  /* The p tag is the last child*/
+    margin-bottom: 0;
+}
+
+/* Make Space Betwwen Username and Password input fields */
+
+.form--input-group {
+    margin-bottom: 1rem;
+}
+
+/*Make the input field coloured in.*/
+
+.form--input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 1px solid lightgrey;
+    outline: none;
+    background: lightgrey;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+/* If selecting a field, it would turn white. Also cerate border color on input field */
+
+.form--input:focus {
+    border-color: var(--Main-Colour);
+    background: white;
+}
+
+.form--button {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color:white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;  /* Turns cursor into a pointer if it hovers over the button*/
+    outline: none;
+    background: var(--Main-Colour);
+
+}
+
+/*Button changes color if the pointer is on top*/
+
+.form--button:hover {
+    background: var(--Secondary-Colour);
+}
+
+/* One button is pressed, the size changes a little bit */
+
+.form--button:active {
+    transform: scale(0.98);
+}
+
+.form--text {
+    text-align: center;
+}
+
+.form--link {
+    color: var(--Secondary-Colour);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form--link:hover {
+    text-decoration: underline;
+}
+
+
+
